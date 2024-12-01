@@ -1,0 +1,50 @@
+body {
+	font-size: 20px;
+}
+div {
+	padding: 15px;
+	border: 2px solid rebeccapurple;
+	background-color: rgb(204, 179, 147);
+}
+
+section {
+	border: 2px solid navy;
+	padding: 10px;
+}
+/* flex container  */
+.flex-container {
+	display: flex; /*block flex*/
+	flex-direction: column;
+	gap: 0.5em;
+}
+.h-layout {
+	display: flex;
+	gap: 0.5em;
+}
+.h-layout > div {
+	flex: 1 1 33%;
+}
+/* .flex-item {
+	flex: 1 1 100%;
+} */
+/*================ grid container =============*/
+.grid-container {
+	display: grid; /*block grid*/
+	gap: 0.5em;
+	/* grid-auto-flow: column; or column for 1D */
+	grid-template-columns: 1fr 1fr 1fr;
+}
+#footer,
+#header {
+	grid-column: 1/4;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* شبكة من 4 أعمدة */
+}
+
+.item {
+	grid-column: 1 / -1; /* يمتد عبر الأعمدة الأربعة */
+	background-color: lightblue;
+}
